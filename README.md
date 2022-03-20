@@ -45,10 +45,16 @@ Describe any challenges encountered while building the app.
 
 The challenge I encountered while building the first part of this app was trying to 
 resolve this error:
+
     Fatal error: Unexpectedly found nil while unwrapping an Optional value
+
 This error was displaying on line 44 in my ViewController file which at the time was this:
+
     let posterPath = movie["[poster_path]"] as! String
+
 I resolved this error by removing the internal square brackets around poster_path 
 with the new line being:
+
     let posterPath = movie["poster_path"] as! String
+
 I believe this error arose from accidentally pressing the square bracket button again after inserting the quotation marks.
